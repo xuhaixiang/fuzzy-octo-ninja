@@ -1,0 +1,25 @@
+redis:
+  # The redis server's address; required.
+  endpoint: localhost:6379
+  # The minimum number of idle connections to maintain in the pool.  (default: 0)
+  minIdle: 0
+  # The maximum number of idle connections allowed in the pool.  (default: 0)
+  maxIdle: 0
+  # The maximum number of connections allowed in the pool.  (default: 1024)
+  maxTotal: 1924
+
+server:
+  applicationConnectors:
+    - type: http
+      port: 8080
+  adminConnectors:
+    - type: http
+      port: 8081
+
+logging:
+  level: INFO
+  loggers:
+    cn.gv.mark: DEBUG
+    org.hibernate.SQL: ALL
+  appenders:
+    - type: console
